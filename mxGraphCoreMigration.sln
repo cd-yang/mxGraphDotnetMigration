@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mxGraphCoreMigration", "mxGraphCoreMigration\mxGraphCoreMigration.csproj", "{8785231C-71C1-4F5E-9FC3-E20E39AEDD0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mxGraphCoreMigration", "mxGraphCoreMigration\mxGraphCoreMigration.csproj", "{8785231C-71C1-4F5E-9FC3-E20E39AEDD0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mxgraph-dotnet", "mxgraph-dotnet\mxgraph-dotnet.csproj", "{B85AFAF5-4581-43D2-B0AA-AC049628FA45}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{8785231C-71C1-4F5E-9FC3-E20E39AEDD0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8785231C-71C1-4F5E-9FC3-E20E39AEDD0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8785231C-71C1-4F5E-9FC3-E20E39AEDD0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B85AFAF5-4581-43D2-B0AA-AC049628FA45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B85AFAF5-4581-43D2-B0AA-AC049628FA45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B85AFAF5-4581-43D2-B0AA-AC049628FA45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B85AFAF5-4581-43D2-B0AA-AC049628FA45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
