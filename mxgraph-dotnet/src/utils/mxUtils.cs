@@ -199,17 +199,19 @@ namespace com.mxgraph
         /// <returns>Returns the size of the given text.</returns>
         public static mxRectangle GetSizeForString(String text, Font font, int width)
         {
-            TextFormatFlags flags = TextFormatFlags.Default;
+            //TODO: remove win Form, maybe wrong here
+            //TextFormatFlags flags = TextFormatFlags.Default;
 
-            if (width > 0)
-            {
-                flags |= TextFormatFlags.WordBreak;
-            }
+            //if (width > 0)
+            //{
+            //    flags |= TextFormatFlags.WordBreak;
+            //}
 
             Size proposedSize = new Size(width, 0);
-            Size result = TextRenderer.MeasureText(text, font, proposedSize, flags);
+            //Size result = TextRenderer.MeasureText(text, font, proposedSize, flags);
 
-            return new mxRectangle(0, 0, result.Width, result.Height);
+            //return new mxRectangle(0, 0, result.Width, result.Height);
+            return new mxRectangle(0, 0, proposedSize.Width, proposedSize.Height);
         }
 
         /// <summary>

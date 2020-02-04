@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mxGraphCoreMigration", "mxGraphCoreMigration\mxGraphCoreMigration.csproj", "{8785231C-71C1-4F5E-9FC3-E20E39AEDD0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mxgraph-dotnet", "mxgraph-dotnet\mxgraph-dotnet.csproj", "{B85AFAF5-4581-43D2-B0AA-AC049628FA45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mxgraph-dotnet", "mxgraph-dotnet\mxgraph-dotnet.csproj", "{B85AFAF5-4581-43D2-B0AA-AC049628FA45}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
