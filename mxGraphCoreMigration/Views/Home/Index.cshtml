@@ -3,6 +3,32 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h2>mxGraph Dotnet Server Examples</h2>
+    <p>
+        The following Dotnet server examples are available for mxGraph:
+    </p>
+    <ul>
+        <li><a href="Export.htm">Export</a></li>
+        <li><a href="Frontend.htm">Backend</a></li>
+        <li><a href="Hello.aspx">Hello, World!</a></li>
+        @*<li><a href="Deploy.ashx">Deploy</a></li>*@
+    </ul>
+    <div style="border: solid 1px black;background:red;display:none;padding:10px;width:60%;" id="warning">
+        <h3>Warning: Virtual Directory /mxgraph not found!</h3>
+        <p>
+            A virtual directory (<code>/mxgraph</code>) that points to the top-level
+            directory of the mxGraph distribution is required in IIS for these examples
+            to work. This virtual directory must be manually created using the IIS Manager.
+        </p>
+    </div>
+    <script type="text/javascript">
+        // Checks if the virtual directory exists by loading an image that should be in
+        // the virtual directory. If the image cannot be found then a warning is shown.
+        var image = new Image();
+        image.onerror = function() {
+            document.getElementById('warning').style.display = '';
+        }
+        //image.src = '/mxgraph/javascript/src/images/transparent.gif';
+        image.src = 'mxJs/src/images/transparent.gif';
+    </script>
 </div>
