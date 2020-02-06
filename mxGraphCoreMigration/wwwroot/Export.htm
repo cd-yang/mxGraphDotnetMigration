@@ -103,8 +103,13 @@
 	                imgExport.drawState(graph.getView().getState(graph.model.root), svgCanvas);
 
 	                var xml = encodeURIComponent(mxUtils.getXml(root));
-	                new mxXmlRequest('/Echo.ashx', 'filename=export.svg&format=svg' +
-							'&xml=' + xml).simulate(document, '_blank');
+	      //          new mxXmlRequest('/Echo.ashx', 'filename=export.svg&format=svg' +
+							//'&xml=' + xml).simulate(document, '_blank');
+                    new mxXmlRequest('/Home/ExportSvg',
+									'filename=export.svg&format=svg' + '&xml=' + xml,
+									'get')
+                        .simulate(document, '_blank')
+                        .send();
 	            }));
 
 	            function exportFile(format) {
@@ -138,15 +143,20 @@
 	                    bg = '&bg=' + bg;
 	                }
 
-	                new mxXmlRequest('/Export.ashx', 'filename=export.' + format + '&format=' + format +
-	        			bg + '&w=' + w + '&h=' + h + '&xml=' + encodeURIComponent(xml)).
-	        			simulate(document, '_blank');
+	           //     new mxXmlRequest('/Export.ashx', 'filename=export.' + format + '&format=' + format +
+	        			//bg + '&w=' + w + '&h=' + h + '&xml=' + encodeURIComponent(xml)).
+	        			//simulate(document, '_blank');
+
+                    new mxXmlRequest('/Home/ExportPng', 'filename=export.' + format + '&format=' + format +
+                        bg + '&w=' + w + '&h=' + h + '&xml=' + encodeURIComponent(xml))
+                        .simulate(document, '_blank')
+                        .send();
 	            }
 
 	            // Exporting to bitmap using ExportServlet
 	            document.body.appendChild(mxUtils.button('Export PNG', function () {
 	                exportFile('png');
-	            }));
+                }));
 	        }
 	    };
 	</script>
@@ -157,7 +167,7 @@
 
 	<!-- Creates a container for the graph with a grid wallpaper -->
 	<div id="graphContainer"
-		style="position:relative;overflow:hidden;width:321px;height:241px;border:1px solid gray;cursor:default;">
+		 style="position:relative;overflow:hidden;width:321px;height:241px;border:1px solid gray;cursor:default;">
 	</div>
 </body>
 </html>
