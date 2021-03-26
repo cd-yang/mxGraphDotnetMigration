@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -39,12 +35,16 @@ namespace mxGraphCoreMigration
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();    // ²âÊÔ WebSocket£¬ÔÊÐí ws Á¬½Ó
             app.UseStaticFiles();
 
             app.UseRouting();
 
             app.UseAuthorization();
+
+            // If you would like to accept WebSocket requests in a controller, the call to app.UseWebSockets must occur before app.UseEndpoints.
+            // https://docs.microsoft.com/en-us/aspnet/core/fundamentals/websockets?view=aspnetcore-5.0
+            app.UseWebSockets();
 
             app.UseEndpoints(endpoints =>
             {
